@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    
+    html, body {
+        background-image: url(https://wallpapercave.com/wp/wp2691434.jpg);
+      display: flex;
+      justify-content: center;
+        padding:30px;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #000000;
+      background-color: white;
+      }
+      input[type=number] {
+        width: 100%;
+         padding: 15px;
+                          margin: 5px 0 22px 0;
+                          display: inline-block;
+                          border: none;
+                          background: #f1f1f1;
+      }
+
+      h1 {
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align:center;
+      fone-size:18;
+      }
+
+      .formcontainer {
+        background-color: white;
+      text-align: center;
+      margin: 24px 50px 12px;
+      }
+      .container {
+        background-color: white;
+      padding: 16px 0;
+      text-align:left;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      button {
+
+      color: white;
+      background-color: blue;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width: 48%;
+      }
+    </style>
+
+        
+
+<body>
+
+
+
+
+  <form style="border:1px solid #CCC" action="/predict" method="POST">
+
+    <div class="formcontainer" style="margin-top: 30px;">
+        <h1>INTRUSION DETECTION SYSTEM</h1>
+        <div class="container">
+
+
+  <label for="input1">duration: </label>
+  <input type="number" id="input1" name="input1" min="0" max="1000" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input2">Protocol type : </label>
+  <input type="number" id="input2" name="input2" min="0" max="2" placeholder="enter value between 0,1,2"><br><br>
+
+  <label for="input3">Flag : </label>
+  <input type="number" id="input3" name="input3" min="0" max="10" placeholder="enter value between 0...10"><br><br>
+
+  <label for="input4">src_bytes : </label>
+  <input type="number" id="input4" name="input4" placeholder="enter value between 100,200"><br><br>
+
+  <label for="input5">dst_bytes: </label>
+  <input type="number" id="input5" name="input5" min="0" max="100000" placeholder="enter value between 1000...5000"><br><br>
+
+  <label for="input6">land: </label>
+  <input type="number" id="input6" name="input6" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input7">wrong_fragment : </label>
+  <input type="number" id="input7" name="input7" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input8">urgent: </label>
+  <input type="number" id="input8" name="input8" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input9">hot: </label>
+  <input type="number" id="input9" name="input9" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input10">num_failed_logins: </label>
+  <input type="number" id="input10" name="input10" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input11">logged_in : </label>
+  <input type="number" id="input11" name="input11" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input12">num_compromised : </label>
+  <input type="number" id="input12" name="input12" placeholder="enter value between 0,1,2,3"><br><br>
+
+  <label for="input13">root_shell : </label>
+  <input type="number" id="input13" name="input13" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input14">su_attempted: </label>
+  <input type="number" id="input14" name="input14" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input15">num_file_creations: </label>
+  <input type="number" id="input15" name="input15" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input16">num_shells : </label>
+  <input type="number" id="input16" name="input16" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input17">num_access_files : </label>
+  <input type="number" id="input17" name="input17" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input18">is_guest_login: </label>
+  <input type="number" id="input18" name="input18" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input19">count : </label>
+  <input type="number" id="input19" name="input19" min="0" max="1000" placeholder="enter value between 0,511"><br><br>
+
+  <label for="input20">srv_count: </label>
+  <input type="number" id="input20" name="input20" min="0" max="1000" placeholder="enter value between 0,511"><br><br>
+
+  <label for="input21">serror_rate : </label>
+  <input type="number" id="input21" name="input21" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input22">rerror_rate : </label>
+  <input type="number" id="input22" name="input22" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input23">same_srv_rate: </label>
+  <input type="number" id="input23" name="input23" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input24">diff_srv_rate: </label>
+  <input type="number" id="input24" name="input24" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input25">srv_diff_host_rate </label>
+  <input type="number" id="input25" name="input25" min="0" max="9500" placeholder="enter value between 9,500"><br><br>
+
+  <label for="input26">dst_host_count: </label>
+  <input type="number" id="input26" name="input26"  min="0" max="9500" placeholder="enter value between 9,500"><br><br>
+
+  <label for="input27">dst_host_srv_count : </label>
+  <input type="number" id="input27" name="input27" min="0" max="9500" placeholder="enter value between 9,500"><br><br>
+
+  <label for="input28">dst_host_diff_srv_rate : </label>
+  <input type="number" id="input28" name="input28" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+
+  <label for="input29">dst_host_same_src_port_rate	 : </label>
+  <input type="number" id="input29" name="input29" min="0" max="1" placeholder="enter value between lt or gt 0,1.00"><br><br>
+
+  <label for="input30">dst_host_srv_diff_host_rate </label>
+  <input type="number" id="input30" name="input30" min="0" max="1" placeholder="enter value between 0,1"><br><br>
+    </div>
+    <button type="submit"><strong>PREDICT</strong></button>
+</div>
+</form>
+
+
+</body>
+</html>
